@@ -1,31 +1,45 @@
-Project
+PROJECT
 =========
 
 Each scenario always follows the same basic format:
 
-Scenario: Some description of the scenario
+.. code-block:: bash
 
-  Given some context
+    Scenario: Some description of the scenario
 
-  When some event
+    Given some context
 
-  Then outcome
+    When some event
+
+    Then outcome
 
 Each part of the scenario - the context, the event, and the outcome - can be extended by adding the And or But keyword:
 
-Scenario: Some description of the scenario
+.. code-block:: bash
 
-  Given some context
+    Scenario: Some description of the scenario
 
-  And more context
+    Given some context
 
-  When some event
+    And more context
 
-  And second event occurs
+    When some event
 
-  Then outcome
+    And second event occurs
 
-  And another outcome
+    Then outcome
 
-  But another outcome
+    And another outcome
+
+    But another outcome
+
+.. note::
+
+    There’s no actual difference between, Then, And But or any of the other words that start each line.
+    These keywords are all made available so that your scenarios are natural and readable.
+
+
+
+
+
 
