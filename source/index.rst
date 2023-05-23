@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to behat's documentation!
+Welcome to Behat's Documentation!
 =================================
 
 .. toctree::
@@ -13,5 +13,6 @@ Welcome to behat's documentation!
 
 
    Introduction <./modules/introduction/index.rst>
-   Project <./modules/project/index.rst>
+   Features and Scenario <./modules/featuresAndScenario/index.rst>
+   Running Behat <./modules/project/index.rst>
 
