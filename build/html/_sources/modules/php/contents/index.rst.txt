@@ -1,7 +1,7 @@
 Contents
 ==========
 
-.. list-table:: Contents
+.. list-table:: Index
    :widths: 25 50
    :header-rows: 1
 
