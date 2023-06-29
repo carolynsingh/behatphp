@@ -3,16 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Behat's Documentation!
+Welcome to Documentation!
 =================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
-
-   Introduction <./modules/introduction/index.rst>
-   Features and Scenario <./modules/featuresAndScenario/index.rst>
-   Running Behat <./modules/project/index.rst>
+   Behat <./modules/behat/index.rst>
+   Php <./modules/php/index.rst>
 

@@ -17,7 +17,7 @@ BDD places great emphasis on building “software that matters” and defines se
 
 .. image:: images/bdd1.jpg
 
-All features, and ultimately all code, should map back to business goals and the project vision.
+All features, and ultimately all code should map back to business goals and the project vision.
 
 .. image:: images/bdd2.jpg
 
