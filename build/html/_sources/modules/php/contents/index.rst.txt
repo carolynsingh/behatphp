@@ -6,7 +6,7 @@ Contents
    :header-rows: 1
 
    * - Video no.
-     - Contents
+     - Topic
 
    * - 1
      - how to install php
