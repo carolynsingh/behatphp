@@ -18,6 +18,7 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Namespaces" href="../namespaces/index.html" />
     <link rel="prev" title="Conditionals" href="../conditionals/index.html" /> 
 </head>
 
@@ -52,6 +53,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../dataStructures/index.html"> Php Data Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../conditionals/index.html"> Conditionals</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#"> MySQL Connection using PDO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../namespaces/index.html"> Namespaces</a></li>
 </ul>
 </li>
 </ul>
@@ -86,6 +88,7 @@
              
   <section id="mysql-connection-using-pdo">
 <h1>MySQL Connection using PDO<a class="headerlink" href="#mysql-connection-using-pdo" title="Permalink to this headline"></a></h1>
+<p>To set up MySQL :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker run --name mysql -d -p <span class="m">3307</span>:3306 --
 
 <span class="nv">env</span><span class="o">=</span><span class="s2">&quot;MYSQL_DATABASE=laravel&quot;</span> --
@@ -101,47 +104,65 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker start mysql
 </pre></div>
 </div>
+<img alt="../../../../_images/img6.png" src="../../../../_images/img6.png" />
 <p>To execute :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker <span class="nb">exec</span> -it mysql sh
 mysql -u root -p
 </pre></div>
 </div>
-<p>Create database :</p>
+<img alt="../../../../_images/img_110.png" src="../../../../_images/img_110.png" />
 <p>The CREATE DATABASE statement is used to create a database in MySQL.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;CREATE DATABASE myDB&quot;</span><span class="p">;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> CREATE DATABASE myDB<span class="p">;</span>
 </pre></div>
 </div>
-<p>Create table :</p>
+<img alt="../../../../_images/img_22.png" src="../../../../_images/img_22.png" />
+<p>The SHOW DATABASE statement is used to view all databases in MySQL.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> SHOW DATABASES<span class="p">;</span>
+</pre></div>
+</div>
+<img alt="../../../../_images/img_31.png" src="../../../../_images/img_31.png" />
+<p>The USE (name of database) statement is used to use a particular database in MySQL.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> USE myDB<span class="p">;</span>
+</pre></div>
+</div>
+<img alt="../../../../_images/img_41.png" src="../../../../_images/img_41.png" />
 <p>The CREATE TABLE statement is used to create a table in MySQL.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;CREATE TABLE MyGuests (</span>
-<span class="s2">id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,</span>
-<span class="s2">firstname VARCHAR(30) NOT NULL,</span>
-<span class="s2">lastname VARCHAR(30) NOT NULL,</span>
-<span class="s2">email VARCHAR(50),</span>
-<span class="s2">reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</span>
-<span class="s2">)&quot;</span><span class="p">;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> CREATE TABLE MyGuests <span class="o">(</span>
+id INT<span class="o">(</span><span class="m">6</span><span class="o">)</span> UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR<span class="o">(</span><span class="m">30</span><span class="o">)</span> NOT NULL,
+lastname VARCHAR<span class="o">(</span><span class="m">30</span><span class="o">)</span> NOT NULL,
+email VARCHAR<span class="o">(</span><span class="m">50</span><span class="o">)</span>,
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+<span class="o">)</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>To insert data :</p>
-<p>The INSERT INTO statement is used to add new records to a MySQL table:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO MyGuests (firstname, lastname, email)</span>
-<span class="s2">VALUES (&#39;John&#39;, &#39;Doe&#39;, &#39;john@example.com&#39;)&quot;</span><span class="p">;</span>
+<img alt="../../../../_images/img_51.png" src="../../../../_images/img_51.png" />
+<p>The SHOW FULL TABLES statement is used to view tables in MySQL.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> SHOW FULL TABLES<span class="p">;</span>
 </pre></div>
 </div>
-<p>Select data :</p>
-<p>The SELECT statement is used to select data from one or more tables:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT column_name(s) FROM table_name&quot;</span><span class="p">;</span>
+<img alt="../../../../_images/img_61.png" src="../../../../_images/img_61.png" />
+<p>The INSERT INTO statement is used to add new records to a MySQL table.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> INSERT INTO MyGuests <span class="o">(</span>firstname, lastname, email<span class="o">)</span>
+VALUES <span class="o">(</span><span class="s1">&#39;John&#39;</span>, <span class="s1">&#39;Doe&#39;</span>, <span class="s1">&#39;john@example.com&#39;</span><span class="o">)</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>or we can use the * character to select ALL columns from a table:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM table_name&quot;</span><span class="p">;</span>
+<img alt="../../../../_images/img_71.png" src="../../../../_images/img_71.png" />
+<p>The SELECT statement is used to select data from one or more tables.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> SELECT column_name<span class="o">(</span>s<span class="o">)</span> FROM table_name<span class="p">;</span>
 </pre></div>
 </div>
-<p>Delete data :</p>
-<p>The DELETE statement is used to delete records from a table:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM table_name WHERE some_column = some_value&quot;</span><span class="p">;</span>
+<img alt="../../../../_images/img_81.png" src="../../../../_images/img_81.png" />
+<p>or we can use the * character to select ALL columns from a table.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> SELECT * FROM table_name<span class="p">;</span>
 </pre></div>
 </div>
+<img alt="../../../../_images/img_91.png" src="../../../../_images/img_91.png" />
+<p>The DROP DATABASE statement is used to delete a database.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> DROP DATABASE mydb<span class="p">;</span>
+</pre></div>
+</div>
+<img alt="../../../../_images/img_101.png" src="../../../../_images/img_101.png" />
 <p>Construct PDO :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> try <span class="o">{</span>
 
@@ -157,6 +178,7 @@ mysql -u root -p
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../conditionals/index.html" class="btn btn-neutral float-left" title="Conditionals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../namespaces/index.html" class="btn btn-neutral float-right" title="Namespaces" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

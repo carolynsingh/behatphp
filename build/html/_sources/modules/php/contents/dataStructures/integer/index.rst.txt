@@ -5,7 +5,7 @@ An integer data type is a non-decimal number between -2,147,483,648 and 2,147,48
 
 In the following example $x is an integer.
 
-The PHP var_dump() function returns the data type and value:
+The PHP var_dump() function returns the data type and value :
 
 .. code-block:: bash
 
@@ -14,4 +14,6 @@ The PHP var_dump() function returns the data type and value:
    var_dump($x);
    ?>
 
-Result : int(5985)
+Result :
+
+.. image:: images/img.png

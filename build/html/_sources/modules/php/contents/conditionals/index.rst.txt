@@ -5,19 +5,43 @@ PHP - The if Statement
 -------------------------
 The if statement executes some code if one condition is true.
 
-Syntax:
+Example :
 
-if (condition) {
-  code to be executed if condition is true; }
+.. code-block:: bash
+
+   <?php
+   $t = date("H");
+
+   if ($t < "20") {
+   echo "Have a good day!";
+   }
+   ?>
+
+Result :
+
+.. image:: images/img.png
 
 PHP - The if...else Statement
 -----------------------------------
 The if...else statement executes some code if a condition is true and another code if that condition is false.
 
-Syntax:
+Example :
 
-if (condition) {
-  code to be executed if condition is true;
-} else {
-  code to be executed if condition is false; }
+.. code-block:: bash
+
+   <?php
+   $t = date("H");
+
+   if ($t < "22") {
+   echo "Have a good day!";
+   } else {
+   echo "Have a good night!";
+   }
+   ?>
+
+
+Result :
+
+.. image:: images/img_1.png
+
 

@@ -12,6 +12,8 @@ Basics
     Php Data Structures <./dataStructures/index.rst>
     Conditionals <./conditionals/index.rst>
     MySQL Connection using PDO <./mysqlConnection/index.rst>
+    Namespaces <./namespaces/index.rst>
+
 
 
 

@@ -57,6 +57,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../mysqlConnection/index.html"> MySQL Connection using PDO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../namespaces/index.html"> Namespaces</a></li>
 </ul>
 </li>
 </ul>
@@ -94,22 +95,36 @@
 <section id="php-the-if-statement">
 <h2>PHP - The if Statement<a class="headerlink" href="#php-the-if-statement" title="Permalink to this headline"></a></h2>
 <p>The if statement executes some code if one condition is true.</p>
-<p>Syntax:</p>
-<dl class="simple">
-<dt>if (condition) {</dt><dd><p>code to be executed if condition is true; }</p>
-</dd>
-</dl>
+<p>Example :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?php
+<span class="nv">$t</span> <span class="o">=</span> date<span class="o">(</span><span class="s2">&quot;H&quot;</span><span class="o">)</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="nv">$t</span> &lt; <span class="s2">&quot;20&quot;</span><span class="o">)</span> <span class="o">{</span>
+<span class="nb">echo</span> <span class="s2">&quot;Have a good day!&quot;</span><span class="p">;</span>
+<span class="o">}</span>
+?&gt;
+</pre></div>
+</div>
+<p>Result :</p>
+<img alt="../../../../_images/img1.png" src="../../../../_images/img1.png" />
 </section>
 <section id="php-the-if-else-statement">
 <h2>PHP - The if…else Statement<a class="headerlink" href="#php-the-if-else-statement" title="Permalink to this headline"></a></h2>
 <p>The if…else statement executes some code if a condition is true and another code if that condition is false.</p>
-<p>Syntax:</p>
-<dl class="simple">
-<dt>if (condition) {</dt><dd><p>code to be executed if condition is true;</p>
-</dd>
-<dt>} else {</dt><dd><p>code to be executed if condition is false; }</p>
-</dd>
-</dl>
+<p>Example :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?php
+<span class="nv">$t</span> <span class="o">=</span> date<span class="o">(</span><span class="s2">&quot;H&quot;</span><span class="o">)</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="nv">$t</span> &lt; <span class="s2">&quot;22&quot;</span><span class="o">)</span> <span class="o">{</span>
+<span class="nb">echo</span> <span class="s2">&quot;Have a good day!&quot;</span><span class="p">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+<span class="nb">echo</span> <span class="s2">&quot;Have a good night!&quot;</span><span class="p">;</span>
+<span class="o">}</span>
+?&gt;
+</pre></div>
+</div>
+<p>Result :</p>
+<img alt="../../../../_images/img_17.png" src="../../../../_images/img_17.png" />
 </section>
 </section>
 

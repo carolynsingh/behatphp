@@ -58,6 +58,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../conditionals/index.html"> Conditionals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../mysqlConnection/index.html"> MySQL Connection using PDO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../namespaces/index.html"> Namespaces</a></li>
 </ul>
 </li>
 </ul>
@@ -95,31 +96,33 @@
 <h1>Array and Loops<a class="headerlink" href="#array-and-loops" title="Permalink to this headline"></a></h1>
 <section id="declaring-an-array">
 <h2>Declaring an array<a class="headerlink" href="#declaring-an-array" title="Permalink to this headline"></a></h2>
-<p>In PHP, the array() function is used to create an array:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$array</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<p>In PHP, the array() function is used to create an array :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$array</span> <span class="o">=</span> <span class="o">()</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Example of an array</p>
+<p>Example of an array :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?php
 <span class="nv">$cars</span> <span class="o">=</span> array<span class="o">(</span><span class="s2">&quot;Volvo&quot;</span>, <span class="s2">&quot;BMW&quot;</span>, <span class="s2">&quot;Toyota&quot;</span><span class="o">)</span><span class="p">;</span>
 <span class="nb">echo</span> <span class="s2">&quot;I like &quot;</span> . <span class="nv">$cars</span><span class="o">[</span><span class="m">0</span><span class="o">]</span> . <span class="s2">&quot;, &quot;</span> . <span class="nv">$cars</span><span class="o">[</span><span class="m">1</span><span class="o">]</span> . <span class="s2">&quot; and &quot;</span> . <span class="nv">$cars</span><span class="o">[</span><span class="m">2</span><span class="o">]</span> . <span class="s2">&quot;.&quot;</span><span class="p">;</span>
 ?&gt;
 </pre></div>
 </div>
-<p>Result : I like Volvo, BMW and Toyota.</p>
+<p>Result :</p>
+<img alt="../../../../../_images/img2.png" src="../../../../../_images/img2.png" />
 <p>Associative Array</p>
-<p>Example of an associative array</p>
+<p>Example of an associative array :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?php
 <span class="nv">$age</span> <span class="o">=</span> array<span class="o">(</span><span class="s2">&quot;Peter&quot;</span><span class="o">=</span>&gt;<span class="s2">&quot;35&quot;</span>, <span class="s2">&quot;Ben&quot;</span><span class="o">=</span>&gt;<span class="s2">&quot;37&quot;</span>, <span class="s2">&quot;Joe&quot;</span><span class="o">=</span>&gt;<span class="s2">&quot;43&quot;</span><span class="o">)</span><span class="p">;</span>
 <span class="nb">echo</span> <span class="s2">&quot;Peter is &quot;</span> . <span class="nv">$age</span><span class="o">[</span><span class="s1">&#39;Peter&#39;</span><span class="o">]</span> . <span class="s2">&quot; years old.&quot;</span><span class="p">;</span>
 ?&gt;
 </pre></div>
 </div>
-<p>Result : Peter is 35 years old.</p>
+<p>Result :</p>
+<img alt="../../../../../_images/img_19.png" src="../../../../../_images/img_19.png" />
 </section>
 <section id="looping-over-an-array-using-an-array">
 <h2>Looping over an array (Using an array)<a class="headerlink" href="#looping-over-an-array-using-an-array" title="Permalink to this headline"></a></h2>
-<p>To loop through and print all the values of an array, you could use a foreach loop, like this:</p>
+<p>To loop through and print all the values of an array, you could use a foreach loop, like this :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;?php
 <span class="nv">$age</span> <span class="o">=</span> array<span class="o">(</span><span class="s2">&quot;Peter&quot;</span><span class="o">=</span>&gt;<span class="s2">&quot;35&quot;</span>, <span class="s2">&quot;Ben&quot;</span><span class="o">=</span>&gt;<span class="s2">&quot;37&quot;</span>, <span class="s2">&quot;Joe&quot;</span><span class="o">=</span>&gt;<span class="s2">&quot;43&quot;</span><span class="o">)</span><span class="p">;</span>
 
@@ -130,11 +133,8 @@ foreach<span class="o">(</span><span class="nv">$age</span> as <span class="nv">
 ?&gt;
 </pre></div>
 </div>
-<p>Result : Key=Peter, Value=35</p>
-<blockquote>
-<div><p>Key=Ben, Value=37</p>
-<p>Key=Joe, Value=43</p>
-</div></blockquote>
+<p>Result :</p>
+<img alt="../../../../../_images/img_21.png" src="../../../../../_images/img_21.png" />
 </section>
 </section>
 

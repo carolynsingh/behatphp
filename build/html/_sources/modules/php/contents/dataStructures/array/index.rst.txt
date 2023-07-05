@@ -5,13 +5,13 @@ Array and Loops
 Declaring an array
 ---------------------
 
-In PHP, the array() function is used to create an array:
+In PHP, the array() function is used to create an array :
 
 .. code-block:: bash
 
-    $array = [];
+    $array = ();
 
-Example of an array
+Example of an array :
 
 .. code-block:: bash
 
@@ -20,11 +20,13 @@ Example of an array
    echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
    ?>
 
-Result : I like Volvo, BMW and Toyota.
+Result :
+
+.. image:: images/img.png
 
 Associative Array
 
-Example of an associative array
+Example of an associative array :
 
 .. code-block:: bash
 
@@ -33,12 +35,14 @@ Example of an associative array
    echo "Peter is " . $age['Peter'] . " years old.";
    ?>
 
-Result : Peter is 35 years old.
+Result :
+
+.. image:: images/img_1.png
 
 Looping over an array (Using an array)
 -------------------------------------------
 
-To loop through and print all the values of an array, you could use a foreach loop, like this:
+To loop through and print all the values of an array, you could use a foreach loop, like this :
 
 .. code-block:: bash
 
@@ -51,11 +55,8 @@ To loop through and print all the values of an array, you could use a foreach lo
    }
    ?>
 
-Result : Key=Peter, Value=35
+Result :
 
-           Key=Ben, Value=37
-
-           Key=Joe, Value=43
-
+.. image:: images/img_2.png
 
 

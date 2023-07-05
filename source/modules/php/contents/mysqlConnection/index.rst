@@ -1,6 +1,8 @@
 MySQL Connection using PDO
 ==============================
 
+To set up MySQL :
+
 .. code-block:: bash
 
    sudo docker run --name mysql -d -p 3307:3306 --
@@ -19,6 +21,8 @@ To start container :
 
    sudo docker start mysql
 
+.. image:: images/img.png
+
 To execute :
 
 .. code-block:: bash
@@ -26,58 +30,90 @@ To execute :
    sudo docker exec -it mysql sh
    mysql -u root -p
 
-Create database :
+.. image:: images/img_1.png
+
 
 The CREATE DATABASE statement is used to create a database in MySQL.
 
 .. code-block:: bash
 
-   $sql = "CREATE DATABASE myDB";
+   $sql = CREATE DATABASE myDB;
 
-Create table :
+.. image:: images/img_2.png
+
+The SHOW DATABASE statement is used to view all databases in MySQL.
+
+.. code-block:: bash
+
+   $sql = SHOW DATABASES;
+
+.. image:: images/img_3.png
+
+The USE (name of database) statement is used to use a particular database in MySQL.
+
+.. code-block:: bash
+
+   $sql = USE myDB;
+
+.. image:: images/img_4.png
+
+
 
 The CREATE TABLE statement is used to create a table in MySQL.
 
 .. code-block:: bash
 
-   $sql = "CREATE TABLE MyGuests (
+   $sql = CREATE TABLE MyGuests (
    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
    firstname VARCHAR(30) NOT NULL,
    lastname VARCHAR(30) NOT NULL,
    email VARCHAR(50),
    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-   )";
+   );
 
-To insert data :
+.. image:: images/img_5.png
 
-The INSERT INTO statement is used to add new records to a MySQL table:
-
-.. code-block:: bash
-
-   $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-   VALUES ('John', 'Doe', 'john@example.com')";
-
-Select data :
-
-The SELECT statement is used to select data from one or more tables:
+The SHOW FULL TABLES statement is used to view tables in MySQL.
 
 .. code-block:: bash
 
-   $sql = "SELECT column_name(s) FROM table_name";
+   $sql = SHOW FULL TABLES;
 
-or we can use the * character to select ALL columns from a table:
+.. image:: images/img_6.png
 
-.. code-block:: bash
-
-   $sql = "SELECT * FROM table_name";
-
-Delete data :
-
-The DELETE statement is used to delete records from a table:
+The INSERT INTO statement is used to add new records to a MySQL table.
 
 .. code-block:: bash
 
-   $sql = "DELETE FROM table_name WHERE some_column = some_value";
+   $sql = INSERT INTO MyGuests (firstname, lastname, email)
+   VALUES ('John', 'Doe', 'john@example.com');
+
+.. image:: images/img_7.png
+
+
+The SELECT statement is used to select data from one or more tables.
+
+.. code-block:: bash
+
+   $sql = SELECT column_name(s) FROM table_name;
+
+.. image:: images/img_8.png
+
+or we can use the * character to select ALL columns from a table.
+
+.. code-block:: bash
+
+   $sql = SELECT * FROM table_name;
+
+.. image:: images/img_9.png
+
+The DROP DATABASE statement is used to delete a database.
+
+.. code-block:: bash
+
+   $sql = DROP DATABASE mydb;
+
+.. image:: images/img_10.png
 
 Construct PDO :
 

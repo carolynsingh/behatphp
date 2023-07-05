@@ -5,7 +5,7 @@ A comment in PHP code is a line that is not executed as a part of the program.
 
 Its only purpose is to be read by someone who is looking at the code.
 
-Syntax for single-line comments:
+Syntax for single-line comments :
 
 .. code-block:: bash
 
@@ -15,7 +15,7 @@ Syntax for single-line comments:
    # This is also a single-line comment
    ?>
 
-Syntax for multiple-line comments:
+Syntax for multiple-line comments :
 
 .. code-block:: bash
 
